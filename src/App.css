@@ -38,46 +38,48 @@
 }
 
 .social-icon {
-  display: inline-block;
-  font-size: small;
-  font: 700;
-
-
+  display: inline-flex; /* Use inline-flex for vertical alignment */
+  align-items: right; /* Vertically center items within the container */
 }
+
 .social-icon a {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background: rgba(16, 52, 184, 0.154);
-  display: inline-flex;
   border-radius: 50%;
   margin-right: 15px;
+  display: flex; /* Use flex for horizontal alignment */
   align-items: center;
   justify-content: center;
   line-height: 1;
   border: 1px solid hwb(0 100% 0% / 0.5);
+  position: relative; /* Make the container relative for absolute positioning */
 }
 
 .social-icon a::before {
-    content: "";
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    background-color: #008F7A;
-    border-radius: 50%;
-    transform: scale(0);
-	transition: 0.3s ease-in-out;
+  content: "";
+  width: 100%; /* Use percentage to ensure responsiveness */
+  height: 100%; /* Use percentage to ensure responsiveness */
+  position: absolute;
+  background-color: #008F7A;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
 }
 
 .social-icon a:hover::before {
   transform: scale(1);
 }
+
 .social-icon a img {
-width: 40%;
-z-index: 1;
-transition: 0.3s ease-in-out;
+  max-width: 50%; /* Ensure images don't exceed the container size */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1;
+  transition: 0.3s ease-in-out;
 }
+
 .social-icon a:hover img {
-filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 /************ Navbar Css ************/
 
