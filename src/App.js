@@ -6,6 +6,7 @@ import logo from './assets/logo.png'
 import navIcon1 from './assets/nav-icon1.svg'
 import navIcon3 from './assets/dec.png'
 import email from './assets/ema.jpg'
+import github from './assets/github.png'
 import headerImg from "./assets/typing.avif";
 import { Container, Row, Col } from "react-bootstrap";
 import PageComponents from './components/pageComponent';
@@ -59,11 +60,18 @@ function App() {
 				</div>
 			</div>
 		</section>
-		<footer className="footer">
+		<section className="footer">
+
 			<p className="text-footer">
 				Copyright ©-All rights are reserved
 			</p>
-		</footer>
+			<div className="footer-icon">
+              <a href="https://www.linkedin.com/in/hareg-aderie-a4ab51288" target="_blank"><img src={navIcon1} alt="" /></a>
+              <a href="#"><img src={github} alt="" /></a>
+              <a href="#"><img src={email} alt="" /></a>
+              <a href="#"><img src={navIcon3} alt="" /></a>
+        </div> 
+		</section>
 	</div>
 	
 	)

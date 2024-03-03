@@ -10,7 +10,14 @@
 
 .footer {
 	background-color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+
 }
+
+
 
 /* Navbar*/
 
@@ -34,7 +41,7 @@
 	width: 70%;
 	display: inline-flex;
 	padding: 40px;
-	gap:100px;
+	gap:50px;
 	align-items: center;
 }
 
@@ -48,8 +55,8 @@
 
 .logo img {
 	padding-top: 20px;
-	padding-left: 10px;
-	width: 85px;
+	padding-left: 20px;
+	width: 80px;
 	/* border-radius: 90px; */
 }
 

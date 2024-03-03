@@ -18,15 +18,15 @@ const Navbar = () => {
 					</div>
           <ul class="nav-list">
 					<li><Link to="/Home">Home</Link></li>
-					<li><Link to="/about">About Me</Link></li>
+					<li><Link to="/about">About me</Link></li>
 					<li><Link to="/Projects" >Projects</Link></li>
 					<li><Link to='/student'>Student</Link></li>
 				</ul>
         <div className="social-icon">
               <a href="https://www.linkedin.com/in/hareg-aderie-a4ab51288" target="_blank"><img src={navIcon1} alt="" /></a>
-              <a href="#"><img src={navIcon3} alt="" /></a>
-              <a href="#"><img src={email} alt="" /></a>
               <a href="#"><img src={github} alt="" /></a>
+              <a href="#"><img src={email} alt="" /></a>
+              <a href="#"><img src={navIcon3} alt="" /></a>
         </div>        
 			</nav>
 		
