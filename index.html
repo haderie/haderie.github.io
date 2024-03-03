@@ -1,7 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your React App Title</title>
+  <!-- Include your CSS files, like index.css, here if needed -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div id="root"></div>
+
+  <!-- Include your React and ReactDOM scripts -->
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+  <script>
+    // Your React code here
+    const { createRoot } = ReactDOM;
+    const root = createRoot(document.getElementById('root'));
+
+    root.render(
+      React.createElement(React.StrictMode, null,
+        React.createElement(BrowserRouter, null,
+          React.createElement(App, null)
+        )
+      )
+    );
+  </script>
+
+  <!-- Include other scripts if needed -->
+
 </body>
+
 </html>
