@@ -8,8 +8,8 @@ const Main = () => {
   return (
     
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
-     <Route path='/about' element={<About />} />
      <Route path='/Home' element={<Banner />} />
+     <Route path='/about' element={<About />} />
     </Routes>
   );
 }

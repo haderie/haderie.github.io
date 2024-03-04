@@ -2,21 +2,15 @@ import React, {ReactElement, useRef } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import './App.css';
-import logo from './assets/logo.png'
-import navIcon1 from './assets/nav-icon1.svg'
-import navIcon3 from './assets/dec.png'
-import email from './assets/ema.jpg'
-import github from './assets/github.png'
 import headerImg from "./assets/typing.avif";
 import { Container, Row, Col } from "react-bootstrap";
 import PageComponents from './components/pageComponent';
 import About from './pages/About';
-import Hompage from './pages/Homepage';
-import Homepage from './pages/Homepage';
 
-import Main from './pages/Main';
 import Navbar from './pages/Navbar';
-import Banner from './pages/Banner';
+import Homepage from './pages/Homepage';
+import Footer from './pages/Footer'
+
 
 function App() {
 
@@ -34,23 +28,15 @@ function App() {
 	return (
 		<div>
 			<Navbar />
-			<Main />
-			
-	<section class="section">
-		<div class="box-main" ref={projectRef}>
-			<div class="secondHalf">
-				<h1 class="text-big" id="program">
-					Projects!
-				</h1>
-				<p class="text-small">
-					blah
-				</p>
-			</div>
-		</div>
-	</section>
+			<Routes> 
+				<Route path='/Home' element={<Homepage />} />
+				<Route path='/about' element={<About />} />
+			</Routes>
+
+	
 		<section class="section">
-			<div class="box-main">
-				<div class="secondHalf">
+			<div class="box">
+				<div class="sec">
 					<h1 class="text-big" id="program">
 						Rand 3
 					</h1>
@@ -60,18 +46,7 @@ function App() {
 				</div>
 			</div>
 		</section>
-		<section className="footer">
-
-			<p className="text-footer">
-				Copyright ©-All rights are reserved
-			</p>
-			<div className="footer-icon">
-              <a href="https://www.linkedin.com/in/hareg-aderie-a4ab51288" target="_blank"><img src={navIcon1} alt="" /></a>
-              <a href="#"><img src={github} alt="" /></a>
-              <a href="#"><img src={email} alt="" /></a>
-              <a href="#"><img src={navIcon3} alt="" /></a>
-        </div> 
-		</section>
+		<Footer/>
 	</div>
 	
 	)

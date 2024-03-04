@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {ReactElement, useRef } from 'react';
 import { useState, useEffect } from "react";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { useIsVisible } from 'react-is-visible'
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-
 import { Container, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -48,7 +48,16 @@ const Banner = () => {
       setIndex(prevIndex => prevIndex + 1);
     }
   }
+
+  const aboutMeRef = useRef(null);
+	const projectRef = useRef(null);
+
+	const navigate = useNavigate();
+
+  const goToAboutMe = () => navigate('/about');
+
   return (
+    
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
@@ -57,11 +66,12 @@ const Banner = () => {
             <div className={useIsVisible ? "animate__animated animate__fadeIn" : ""}>
               <span className="tagline">。。。˚∆˙Welcome to my Portfolio˙∆˚。。。</span>
               {/*<h1 class="animate__animated animate__bounce">。</h1>*/}
-              <h1>
+              <h1 className='txt-rotate'>
                 {`Hi! I'm Hareg,`} <br/>
-                {`an aspiring`} <span className="wrap">{text + "|"}</span>
+                {`an aspiring`} <span className="wrap">{text}</span>
+
               </h1>
-                <button className = "aboutMeButton">Learn more about me! <ArrowRightCircle size={20}/></button>
+                <button className = "aboutMeButton" onClick={goToAboutMe}>Learn more about me!<ArrowRightCircle size={20}/></button>
           </div>
             </TrackVisibility>
         </Col>

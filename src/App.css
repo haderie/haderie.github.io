@@ -108,12 +108,23 @@
 
 .banner h1 {
   font-size: 65px;
-  font-weight: 700;
+  font-weight: 700px;
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
   padding-left: 50px;
-  display: block;
+}
+/*
+@supports (-webkit-text-stroke: 3px black) {
+  .highlight-word {
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 3px black;
+  }
+}
+*/
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
 }
 
 .aboutMeButton {
@@ -122,11 +133,18 @@
   border: none;
   background: none;
   margin-left: 50px;
+  transition:  0.3s ease-in-out; 
   font-family: initial;
   cursor: pointer;
   color: #0e0d0d;
   font-size: 25px;
+  font-style: italic;
   letter-spacing: 0.8px;
+
+}
+
+.aboutMeButton:hover{
+  margin-left: 65px;
 }
 
 .aboutMeButton svg {
@@ -134,9 +152,10 @@
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
+  
 }
 .aboutMeButton:hover svg {
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 
@@ -186,10 +205,11 @@
         transform: translateY(-20px);
     }
 }
-.txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
-}
 
+
+.text-footer{
+  margin-left: 20px;
+}
 
 .footer-icon {
   display: inline-flex; /* Use inline-flex for vertical alignment */
