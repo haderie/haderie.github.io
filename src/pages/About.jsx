@@ -4,10 +4,12 @@ import Spline from '@splinetool/react-spline';
 
 const About = () => {
     return (
-        <section>
+      <section className="aboutDescription">
         <div className="secondHalf" >
+            <div className="meImage">
+            <Spline scene="https://prod.spline.design/1NMwXUu28bFVap-T/scene.splinecode" />
+            </div>
           <div className="content-wrapper">
-          {/*<Spline scene="https://prod.spline.design/1NMwXUu28bFVap-T/scene.splinecode" />*/}
             <h1 className="text-big" id="program">
               About Me!
             </h1>
