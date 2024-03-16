@@ -29,23 +29,23 @@ function App() {
 		<div>
 			<Navbar />
 			<Routes> 
-				<Route path='/Home' element={<Homepage />} />
+				<Route path='/' element={<Homepage />} />
 				<Route path='/about' element={<About />} />
 			</Routes>
 
 	
-		<section class="section">
+		{/*<section class="section">
 			<div class="box">
 				<div class="sec">
 					<h1 class="text-big" id="program">
-						Rand 3
+						
 					</h1>
 					<p class="text-small">
-						sample text
+						
 					</p>
 				</div>
 			</div>
-		</section>
+	</section>*/}
 		<Footer/>
 	</div>
 	

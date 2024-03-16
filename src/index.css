@@ -21,7 +21,6 @@
 .navbar {
 	display: flex;
 	align-items: center;
-	position: sticky;
 	font-size: small;
 	top: 0;
 	height: 80px; /* Adjust the height as needed */
@@ -30,6 +29,8 @@
 	justify-content: space-between;
 	/* justify-content: space-between; */
 	padding-right: 10px;
+	position: relative; /* Make the container relative for absolute positioning */
+
 }
 
 .nav-list {
@@ -55,9 +56,15 @@
 }
   
   .nav-list li a:hover{
-	color: #008F7A;
+	color: #8f007e;
 	transform: scale(1.15); /* Enlarge the button on hover */
   }  
+
+  .nav-list li a:active,
+  .nav-list li a:focus{
+	color: #8f007e;
+	transform: scale(1.15);
+  }
 
   
 
@@ -96,12 +103,6 @@
 }
 
 
-.aboutDescription {
-    display: flex;
-	justify-content: space-between;
-
-}
-
 .meImage {
 	margin-left: 20px;
 	margin-top: 20px;
@@ -109,6 +110,13 @@
     height: 900px; 
     max-width: 3000px; /* Set your desired maximum width */
     max-height: 600px; /* Set your desired maximum height */
+}
+
+
+.aboutDescription {
+    display: flex;
+	justify-content: space-between;
+
 }
 
 .secondHalf {
@@ -123,8 +131,7 @@
 	margin-right: 50px;
 	max-width: 600px; /* Set your desired maximum width */
     max-height: 600px;
-
-  }
+}
   
 
 .text-big {
@@ -134,7 +141,27 @@
 	flex-direction: column;
 }
 
+h2 {
+	
+	font-size: 50px;
+	font-weight: 700px;
+	letter-spacing: 0.8px;
+	line-height: 1;
+	margin-bottom: 20px;
+	margin-left: 100px;
 
+  }
+
+ 
+
+.text-small a1 {
+	font-size: 22px;
+	letter-spacing: 0.8px;
+	line-height: 1;
+	margin-bottom: 20px;
+	padding-left: 55px;
+	
+  }
 
 .btn {
 margin-left: 20px;

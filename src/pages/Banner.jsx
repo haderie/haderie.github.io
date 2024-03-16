@@ -7,6 +7,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
+
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -63,15 +64,16 @@ const Banner = () => {
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
           <TrackVisibility>
+          
             <div className={useIsVisible ? "animate__animated animate__fadeIn" : ""}>
-              <span className="tagline">。。。˚∆˙Welcome to my Portfolio˙∆˚。。。</span>
-              {/*<h1 class="animate__animated animate__bounce">。</h1>*/}
+            <span className="tagline">。。。˚∆˙Welcome to my Portfolio˙∆˚。。。</span>
+              {/*<h1 class="animate__animated animate__bounceInDown">。</h1>*/}
               <h1 className='txt-rotate'>
                 {`Hi! I'm Hareg,`} <br/>
                 {`an aspiring`} <span className="wrap">{text}</span>
 
               </h1>
-                <button className = "aboutMeButton" onClick={goToAboutMe}>Learn more about me!<ArrowRightCircle size={20}/></button>
+                <button className = "aboutMeButton" href='/about'>Learn more about me!<ArrowRightCircle size={20}/></button>
           </div>
             </TrackVisibility>
         </Col>
