@@ -5,18 +5,12 @@ import Spline from '@splinetool/react-spline';
 const About = () => {
     return (
       <section className="aboutDescription">
-        
         <div className="secondHalf" >
-        
             <div className="meImage">
-            {/*<Spline scene="https://prod.spline.design/1NMwXUu28bFVap-T/scene.splinecode" />*/}
+            {<Spline scene="https://prod.spline.design/1NMwXUu28bFVap-T/scene.splinecode" />}
             </div>
           <div className="content-wrapper">
-            <div className="about-title"> 
               <h3> About Me!</h3>
-           </div>
-           
-            <div className="text-small">
             <a1>
             {"Hi! I'm Hareg! (\hɛər-ɛg\, hair-eg)"} <br />
             an aspiring computer scientist with a deep-rooted commitment to making a positive impact through technology.
@@ -28,8 +22,6 @@ const About = () => {
             a proficient coder but also a team player who thrives in collaborative environments. I am always eager to learn, adapt, 
             and explore new technologies! I am excited about the potential for innovation to bring about positive social change, 
             and I'm dedicated to using my skills to contribute to projects that align with these values.</a1>
-         
-            </div>
           </div>
         </div>
 	</section>

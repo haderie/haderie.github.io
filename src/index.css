@@ -116,7 +116,14 @@
 .aboutDescription {
     display: flex;
 	justify-content: space-between;
+	margin-left: 0; /* Reset left margin */
+}
 
+.aboutDescription h3{
+    font-size: 45px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 .secondHalf {
@@ -133,6 +140,14 @@
     max-height: 600px;
 }
   
+.content-wrapper a1 {
+	font-size: 22px;
+	letter-spacing: 0.8px;
+	line-height: 1;
+	margin-bottom: 20px;
+	padding-left: 55px;
+	
+  }
 
 .text-big {
 	font-weight: 500;
@@ -152,16 +167,6 @@ h2 {
 
   }
 
- 
-
-.text-small a1 {
-	font-size: 22px;
-	letter-spacing: 0.8px;
-	line-height: 1;
-	margin-bottom: 20px;
-	padding-left: 55px;
-	
-  }
 
 .btn {
 margin-left: 20px;

@@ -1,3 +1,4 @@
+import {React, useRef }from 'react';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { Grid, IconButton, TextField, InputLabel } from '@mui/material';
 
@@ -6,45 +7,52 @@ import imgs from '../assets/back.jpg'
 import logos from '../assets/logo.png'
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import Navbar from './Navbar';
 
 const Projects = () => {
+
+
 
   const projects = [
     {
       title: "Maze Game",
-      description: "Design & Development",
+      description: "Design & Developmen",
       imgUrl: imgs,
+      page: '/projects/maze'
     },
     {
       title: "FloodIt",
       description: "Design & Development",
       imgUrl: imgs,
+      page: '/projects/FloodIt'
     },
     {
       title: "BattleSalvo",
       description: "Design & Development",
       imgUrl: imgs,
+      page: '/projects/BattleSalvo'
     },
     {
       title: "Summarizer + Anki",
       description: "Design & Development",
       imgUrl: imgs,
+      page: '/projects/Summarizer'
     },
     {
       title: "Java Bulletjournal",
       description: "Design & Development",
       imgUrl: imgs,
+      page: '/projects/Bulletjournal'
     },
     {
       title: "Shell scripting",
       description: "Design & Development",
       imgUrl: imgs,
+      page: '/projects/Shell'
     },
   ];
-
   return (
-	<section className="project" id="projects">
-	  <Container>
+	<section className="project" id="#projects">
 		<Row>
 		  <Col size={12}>
 			<TrackVisibility>
@@ -68,7 +76,6 @@ const Projects = () => {
 			</TrackVisibility>
 		  </Col>
 		</Row>
-	  </Container>
 	</section>
   );
 };

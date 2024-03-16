@@ -1,4 +1,7 @@
-import React from 'react';
+import { React } from 'react';
+import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+
 import {Link} from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import logo2 from '../assets/logo2.png'
@@ -15,6 +18,20 @@ const Navbar = () => {
     window.location.href = "mailto:aderie.h@northeastern.edu";
     e.preventDefault();
   };
+
+  const navigateToProject= useNavigate();
+
+  const scrollToProjects = () => {
+    navigateToProject('/');
+  
+    setTimeout(() => {
+      scroll.scrollTo('#projects', {
+        duration: 800,
+        smooth: true,
+        offset: -100, // Adjust the offset as needed to accommodate your header or navbar
+      });
+    }, 800); // Delay the second scroll by 800 milliseconds to ensure the navigation to the home page completes first
+  };
     
   return (
     <section className='Navbar'>
@@ -27,8 +44,8 @@ const Navbar = () => {
           <ul class="nav-list">
 					<li><Link to="/">Home</Link></li>
 					<li><Link to="/about">About me</Link></li>
-					<li><Link to="/Projects" >Projects</Link></li>
-					<li><Link to='/student'>Student</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to='/random'>Random</Link></li>
 				</ul>
         <div className="social-icon">
               <a href="https://www.linkedin.com/in/hareg-aderie-a4ab51288" target="_blank"><img src={navIcon1} alt="" /></a>
